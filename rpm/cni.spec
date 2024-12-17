@@ -31,7 +31,8 @@ Source2:        vendor.tar.gz
 BuildRequires:  golang-packaging
 BuildRequires:  shadow-utils
 #BuildRequires:  systemd-rpm-macros
-BuildRequires:  golang(API) >= 1.21
+#BuildRequires:  golang(API) >= 1.21
+BuildRequires:  golang(API) >= 1.23
 BuildRequires:  zstd
 #Requires(post): %fillup_prereq
 Recommends:     cni-plugins
