@@ -25,7 +25,7 @@ Summary:        Container Network Interface - networking for Linux containers
 License:        Apache-2.0
 Group:          System/Management
 URL:            https://github.com/containernetworking/cni
-Source0:        %{name}-%{version}.tar.zst
+Source0:        %{name}-%{version}.tar.gz
 Source1:        99-loopback.conf
 Source2:        vendor.tar.gz
 BuildRequires:  golang-packaging
