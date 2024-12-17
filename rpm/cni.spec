@@ -48,7 +48,7 @@ the container is deleted. Because of this focus, CNI has a wide
 range of support and the specification is simple to implement.
 
 %prep
-%autosetup -a2
+%autosetup -a2 -n %{name}-%{version}/%{name}
 
 %build
 export GOFLAGS=-mod=vendor
