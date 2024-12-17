@@ -12,9 +12,6 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via https://bugs.opensuse.org/
-#
-
 
 %global         provider_prefix github.com/containernetworking/cni
 %global         import_path     %{provider_prefix}
@@ -32,11 +29,11 @@ Source0:        %{name}-%{version}.tar.zst
 Source1:        99-loopback.conf
 Source2:        vendor.tar.gz
 BuildRequires:  golang-packaging
-BuildRequires:  shadow
-BuildRequires:  systemd-rpm-macros
+BuildRequires:  shadow-utils
+#BuildRequires:  systemd-rpm-macros
 BuildRequires:  golang(API) >= 1.21
 BuildRequires:  zstd
-Requires(post): %fillup_prereq
+#Requires(post): %fillup_prereq
 Recommends:     cni-plugins
 %{?systemd_requires}
 
