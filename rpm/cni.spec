@@ -34,7 +34,6 @@ BuildRequires:  shadow-utils
 #BuildRequires:  golang(API) >= 1.21
 BuildRequires:  golang(API) >= 1.23
 BuildRequires:  zstd
-#Requires(post): %fillup_prereq
 Recommends:     cni-plugins
 %{?systemd_requires}
 
@@ -78,9 +77,6 @@ install -D -p -m 0644 %{SOURCE1} %{buildroot}%{cni_etc_dir}/net.d/99-loopback.co
 
 # documentation
 install -m 755 -d "%{buildroot}%{cni_doc_dir}"
-
-%post
-%{fillup_only -n %{name}}
 
 %files
 %doc README.md
